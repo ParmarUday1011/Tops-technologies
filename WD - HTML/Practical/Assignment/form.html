@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+
+<body>
+
+      <h1 style="text-align: center;">Contact Form</h1>
+    
+    <form action="#" method="post" style="width:auto;text-align: center;">
+        <!-- Full Name -->
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required minlength="3" maxlength="50"
+            placeholder="Enter your full name"><br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email"><br><br>
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Enter a valid 10-digit phone number"
+            required placeholder="e.g., 9876543210"><br><br>
+
+        <!-- Subject -->
+        <label for="subject">Subject:</label>
+        <select id="subject" name="subject" required>
+            <option value="">-- Select a subject --</option>
+            <option value="general">python</option>
+            <option value="support">java</option>
+            <option value="feedback">dbms</option>
+            <option value="other">os</option>
+        </select><br><br>
+
+        <!-- Message -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required minlength="10" maxlength="500"
+            placeholder="Write your message here"></textarea><br><br>
+
+        <!-- Submit Button -->
+        <button>Submit</button>
+    </form>
+
+</body>
+
+</html>
