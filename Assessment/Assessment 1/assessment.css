@@ -1,0 +1,186 @@
+.hero {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+  display: flex; /* Flexbox to align text */
+  justify-content: flex-end; /* push text to right side */
+  align-items: center;       /* center vertically */
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('./software-developer-coding-laptop.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+  z-index: 0;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  max-width: 400px;
+  margin-right: 40px;  /* little gap from right edge */
+  border-radius: 10px; /* optional for nicer look */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #444;
+  color: whitesmoke;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: no;
+}
+
+.sidebar .logo {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  border: double;
+  text-align: center;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  color: #1abc9c;
+}
+
+.sidebar .social a {
+  color: white;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.sidebar footer {
+  font-size: 14px;
+  margin-top: 20px;
+  color:whitesmoke;
+}
+
+/* About */
+.about {
+  display: flex;
+  gap: 40px;
+  padding: 60px 20px;
+  margin-left: 240px;
+}
+
+.about-item {
+  flex: 1;
+}
+
+.about-item i {
+  color: #1abc9c;
+  margin-bottom: 15px;
+}
+
+/* Work */
+.work {
+  padding: 60px 20px;
+  text-align: left;
+  border: double;
+  margin-left: 270px;
+}
+
+.gallery {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.gallery img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Clients */
+.clients {
+  padding: 60px 20px;
+  text-align: left;
+  margin-left: 240px;
+}
+
+.client-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.client-logos img {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+}
+/* Contact */
+.contact {
+  display: flex;
+  gap: 40px;
+  padding: 60px 20px;
+  margin-left: 240px;
+}
+.contact-info {
+  /* flex: 1; */
+  border:double gray;
+  padding: 20px;
+  margin: 20px auto;
+  width: 300px;
+}
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.contact-form button {
+  background: #1abc9c;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.contact-form button:hover {
+  background: #16a085;
+}
