@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio , Video , Svg , Canvas</title>
+</head>
+
+<body>
+    <!-- Audio tag -->
+    <audio src="C:\Users\tops\Downloads\mixkit-crickets-and-insects-in-the-wild-ambience-39.wav" controls muted loop
+        autoplay></audio><br><br>
+
+    <!-- Video tag -->
+    <video
+        src="C:\Users\tops\Downloads\The Suspicious Parcel _ To Catch a Smuggler _ हिन्दी _ Full Episode _ S1-E3 _ National Geographic.mp4"
+        controls muted loop autoplay></video><br><br>
+
+    <!-- Canvas tag -->
+    <!DOCTYPE html>
+    <html>
+    <body>
+        <canvas id="geeks" height="200" width="200" style="border:1px solid black">
+        </canvas>
+        <script>
+            let c = document.getElementById("geeks");
+            let cx = c.getContext("2d");
+            cx.beginPath();
+            cx.arc(100, 100, 90, 0, 2 * Math.PI);
+            cx.stroke();
+        </script>
+    </body>
+    </html>
+
+<br><br>
+
+    <!-- SVG tag -->
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title> </title>
+    </head>
+    <body>
+        <h2>This is SVG tag</h2>
+        <svg height="250" width="600">
+            <line x1="10" y1="10" x2="400" y2="400" style="stroke:rgb(0,0,255);stroke-width:3" />
+        </svg>
+    </body>
+    </html>
+</body>
+</html>
