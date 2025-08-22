@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assessment 1</title>
   <link rel="stylesheet" type="text/css" href="./assessment.css">
+  <script src="https://kit.fontawesome.com/e7a238c639.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="container">
   <div class="hero">
     <!-- Background layer -->
-    <div class="hero-bg"></div>
+    <div class="hbg"></div>
     <!-- Text content -->
-    <div class="hero-text">
+    <div class="htext">
       <h3>INTRODUCING DREAM PULSE</h3>
       <p>
         This box alpha 30 percent. Left sidebar is a sticky element. Right side contents are scrolling up and down. This background has a parallax effect.
@@ -30,18 +31,18 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#intro">INTRO</a></li>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#work">WORK</a></li>
-          <li><a href="#clients">CLIENTS</a></li>
-          <li><a href="#contact">LET'S TALK</a></li>
+          <li><a href="#">INTRO</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">WORK</a></li>
+          <li><a href="#">CLIENTS</a></li>
+          <li><a href="#">LET'S TALK</a></li>
         </ul>
       </nav>
-      <div class="social">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+      <div class="sm">
+        <a href="https://www.facebook.com/"  target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://x.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://in.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/" target="_blank "><i class="fab fa-instagram"></i></a>
       </div>
       <footer>
         <p>&copy; 2025 Dream Pulse<br>Design: Template Mo</p>
@@ -50,8 +51,8 @@
 
           <!-- About Section -->
       <section id="about" class="about">
-        <div class="about-item">
-          <i class="fas fa-balance-scale fa-3x"></i>
+        <div class="aitem">
+          <i class="fa-solid fa-scale-balanced fa-3x"></i>
           <h3>About Us</h3>
           <p>
             When first section is scrolled up, BG image will be disappeared with a parallax effect. Donec ac tempor tellus, a eleifend ligula. Fusce vitae sem sed purus euismod condimentum.
@@ -60,7 +61,7 @@
             Sed ornare nisl at metus tristique suscipit vitae in nibh. Sed rutrum odio ac est hendrerit, at vestibulum felis condimentum.
           </p>
         </div>
-        <div class="about-item">
+        <div class="aitem">
           <i class="fas fa-building fa-3x"></i>
           <h3>Company Profile</h3>
           <p>
@@ -75,7 +76,7 @@
       <!-- Work Section -->
       <section id="work" class="work">
         <h2>Our Work</h2>
-        <div class="gallery">
+        <div class="img">
           <img src="#" alt="work1">
           <img src="#" alt="work2">
           <img src="#" alt="work3">
@@ -89,20 +90,21 @@
         <p>
           Aenean est augue, iaculis ut arcu a, cursus tempus eros. Maecenas ut efficitur lectus, vel commodo nibh.
         </p>
-        <div class="client-logos">
-          <img src="" alt="myob">
-          <img src="" alt="belimo">
-          <img src="" alt="LifeGroups">
-          <img src="" alt="Lilly">
-          <img src="" alt="Citrus">
-          <img src="" alt="Trustly">
-          <img src="" alt="Grabyo">
+        <div class="clogos">
+          <img src="./images/myob.png" alt="myob">
+          <img src="./images/belimo.png" alt="belimo">
+          <img src="./images/lifegroup.png" alt="LifeGroups">
+          <img src="./images/lilly.png" alt="Lilly">
+          <img src="./images/citrus.png" alt="Citrus">
+          <img src="./images/Trustly.png" alt="Trustly">
+          <img src="./images/oldendorff.png" alt="oldendorff">
+          <img src="./images/grabyo.jpg" alt="Grabyo">
         </div>
       </section>
 
       <!-- Contact Section -->
       <section id="contact" class="contact">
-        <div class="contact-info">
+        <div class="continfo">
           <h3>Talk to Us</h3>
           <p>
             Sed aliquet, nibh ac hendrerit faucibus, tellus metus viverra tellus, vel volutpat purus orci ac ex.
@@ -112,7 +114,7 @@
             nascetur ridiculus mus
           </p>
         </div>
-        <form class="contact-form">
+        <form class="contform">
           <input type="text" placeholder="Your Name" required>
           <input type="email" placeholder="Your Email" required>
           <textarea placeholder="Message"></textarea>

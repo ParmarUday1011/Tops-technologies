@@ -1,3 +1,7 @@
+.contact{
+  width: min(800px,90%);
+}
+
 .hero {
   position: relative;
   height: 500px;
@@ -9,20 +13,20 @@
   align-items: center;       /* center vertically */
 }
 
-.hero-bg {
+.hbg {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('./software-developer-coding-laptop.jpg');
+  background-image: url('./images/software-developer-coding-laptop.jpg');
   background-size: cover;
   background-position: center;
   filter: blur(4px);
   z-index: 0;
 }
 
-.hero-text {
+.htext {
   position: relative;
   z-index: 1;
   background: rgba(0, 0, 0, 0.5);
@@ -70,20 +74,11 @@
   transition: 0.3s;
 }
 
-.sidebar nav ul li a:hover {
-  color: #1abc9c;
-}
-
-.sidebar .social a {
+.sidebar .sm a {
   color: white;
-  margin-right: 10px;
+  margin-right: 20px;
   font-size: 18px;
-}
-
-.sidebar footer {
-  font-size: 14px;
-  margin-top: 20px;
-  color:whitesmoke;
+  
 }
 
 /* About */
@@ -91,15 +86,10 @@
   display: flex;
   gap: 40px;
   padding: 60px 20px;
-  margin-left: 240px;
+  margin-left: 280px;
 }
-
-.about-item {
-  flex: 1;
-}
-
-.about-item i {
-  color: #1abc9c;
+.aitem i {
+  color: #0a46ae;;
   margin-bottom: 15px;
 }
 
@@ -108,17 +98,17 @@
   padding: 60px 20px;
   text-align: left;
   border: double;
-  margin-left: 270px;
+  margin-left: 300px;
 }
 
-.gallery {
+.img {
   display: flex;
   gap: 10px;
   justify-content: center;
   margin-top: 30px;
 }
 
-.gallery img {
+.img img {
   width: 200px;
   height: 150px;
   object-fit: cover;
@@ -129,10 +119,10 @@
 .clients {
   padding: 60px 20px;
   text-align: left;
-  margin-left: 240px;
+  margin-left: 280px;
 }
 
-.client-logos {
+.clogos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -140,47 +130,54 @@
   margin-top: 20px;
 }
 
-.client-logos img {
+/* .client-logos img {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background: #fff;
+} */
+ .clogos img {
+  width: 170px;
+  height: 90px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  margin-left: 2px;
 }
+
 /* Contact */
 .contact {
   display: flex;
-  gap: 40px;
+  gap: 70px;
   padding: 60px 20px;
-  margin-left: 240px;
+  margin-left: 280px;
 }
-.contact-info {
-  /* flex: 1; */
+.continfo {
+  flex: 1;
   border:double gray;
   padding: 20px;
   margin: 20px auto;
   width: 300px;
 }
-.contact-form {
+.contform {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-top: 30px;
 }
-.contact-form input,
-.contact-form textarea {
+.contform input, textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-.contact-form button {
-  background: #1abc9c;
+.contform button {
+  background: #4c4e4e;
   color: white;
   padding: 12px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
-}
-.contact-form button:hover {
-  background: #16a085;
 }
