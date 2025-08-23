@@ -34,6 +34,7 @@
   max-width: 400px;
   margin-right: 40px;  /* little gap from right edge */
   border-radius: 10px; /* optional for nicer look */
+  text-align: justify;
 }
 
 /* Sidebar */
@@ -100,19 +101,18 @@
   border: double;
   margin-left: 300px;
 }
-
-.img {
+ .img {
   display: flex;
+  overflow-x: auto;
   gap: 10px;
-  justify-content: center;
-  margin-top: 30px;
+  padding: 10px;
 }
 
 .img img {
-  width: 200px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
+  flex: 0 0 auto;
+  width: 300px;
+  height: auto;
+  border-radius:10px;
 }
 
 /* Clients */
@@ -130,12 +130,6 @@
   margin-top: 20px;
 }
 
-/* .client-logos img {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #fff;
-} */
  .clogos img {
   width: 170px;
   height: 90px;
