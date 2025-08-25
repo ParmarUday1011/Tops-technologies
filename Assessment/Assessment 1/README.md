@@ -114,7 +114,7 @@ This README provides a detailed explanation of the structure, tags, and purpose 
 
 The CSS file defines the visual styles and layout:
 
-- `.hero`, `.hbg`, `.htext`: Styling for the hero/banner area with a blurred background and overlay text.
+- `.intro`, `.introbg`, `.introtext`: Styling for the hero/banner area with a blurred background and overlay text.
 - `.sidebar`: Styles for the fixed sidebar, navigation menu, social icons, and logo.
 - `.about`, `.work`, `.clients`, `.contact`: Layout and spacing for main sections, including flexbox for responsiveness.
 - `.img`, `.clogos`: Styles for image galleries and client logos.
