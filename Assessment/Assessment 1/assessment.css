@@ -2,7 +2,7 @@
   width: min(800px,90%);
 }
 
-.hero {
+.intro {
   position: relative;
   height: 500px;
   width: 100%;
@@ -13,7 +13,7 @@
   align-items: center;       /* center vertically */
 }
 
-.hbg {
+.introbg {
   position: absolute;
   top: 0;
   left: 0;
@@ -26,7 +26,7 @@
   z-index: 0;
 }
 
-.htext {
+.introtext {
   position: relative;
   z-index: 1;
   background: rgba(0, 0, 0, 0.5);
@@ -66,7 +66,7 @@
 }
 
 .sidebar nav ul li {
-  margin: 15px 0;
+  margin: 15px;
 }
 
 .sidebar nav ul li a {
