@@ -1,5 +1,5 @@
 @media(max-width: 700px){
-  .container , .intro , .introbg , .introtext{
+  .container{
 padding: 2em;
   }
 }
@@ -170,4 +170,5 @@ padding: 2em;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
 }
