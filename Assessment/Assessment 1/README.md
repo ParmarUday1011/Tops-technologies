@@ -34,12 +34,12 @@ This README provides a detailed explanation of the structure, tags, and purpose 
 
 ---
 
-#### **Hero Section**
-- `<div class="hero">`  
+#### **Intro Section**
+- `<div class="intro">`  
   This is the banner section, with a background image and intro text.
-  - `<div class="hbg"></div>`  
+  - `<div class="introbg"></div>`  
     A layered div for the background image (CSS applies image and blur).
-  - `<div class="htext">`  
+  - `<div class="introtext">`  
     Content overlay box with heading and description.
     - `<h3>`: Large heading for introduction.
     - `<p>`: Paragraphs for descriptive text.
