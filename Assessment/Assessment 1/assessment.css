@@ -1,8 +1,91 @@
-@media(max-width: 700px){
-  .container{
-padding: 2em;
+/* Mobile first (max 768px) */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Sidebar becomes top navigation */
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .sidebar nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .sidebar footer {
+    display: none; /* hide footer on mobile for simplicity */
+  }
+
+  /* Intro background moves left */
+  .introbg {
+    background-position: left center;
+  }
+
+  /* Intro text centered */
+  .introtext {
+    margin: 20px auto;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  /* Sections take full width */
+  .about,
+  .work,
+  .clients,
+  .contact {
+    margin-left: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .work .img {
+    justify-content: center;
+  }
+
+  .contact {
+    gap: 30px;
   }
 }
+
+/* Tablet screens */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+
+  .about,
+  .work,
+  .clients,
+  .contact {
+    margin-left: 220px;
+  }
+}
+    /* Styles for screens wider than 1024px (e.g., desktops) */
+    @media screen and (min-width:100%) {
+        .container {
+            width: 960px;
+            margin: 0 auto;
+        }
+    } 
+
 .intro {
   position: relative;
   height: 500px;
@@ -21,7 +104,7 @@ padding: 2em;
   right: 0;
   bottom: 0;
   background-image: url('./images/software-developer-coding-laptop.jpg');
-  background-position: center;
+  background-position: left center;
   filter: blur(4px);
 }
 
@@ -170,5 +253,4 @@ padding: 2em;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-
 }
