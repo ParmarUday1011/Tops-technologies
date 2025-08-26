@@ -1,110 +1,17 @@
-/* Mobile first (max 768px) */
-@media screen and (max-width: 768px) {
-  .container {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  /* Sidebar becomes top navigation */
-  .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-  }
-
-  .sidebar nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-  }
-
-  .sidebar footer {
-    display: none; /* hide footer on mobile for simplicity */
-  }
-
-  /* Intro background moves left */
-  .introbg {
-    background-position: left center;
-  }
-
-  /* Intro text centered */
-  .introtext {
-    margin: 20px auto;
-    max-width: 90%;
-    text-align: center;
-  }
-
-  /* Sections take full width */
-  .about,
-  .work,
-  .clients,
-  .contact {
-    margin-left: 0;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .work .img {
-    justify-content: center;
-  }
-
-  .contact {
-    gap: 30px;
-  }
-}
-
-/* Tablet screens */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .container {
-    width: 95%;
-    margin: 0 auto;
-  }
-
-  .sidebar {
-    width: 200px;
-  }
-
-  .about,
-  .work,
-  .clients,
-  .contact {
-    margin-left: 220px;
-  }
-}
-    /* Styles for screens wider than 1024px (e.g., desktops) */
-    @media screen and (min-width:100%) {
-        .container {
-            width: 960px;
-            margin: 0 auto;
-        }
-    } 
-
 .intro {
   position: relative;
   height: 500px;
   width: 100%;
   overflow: hidden;
   color: white;
-  display: flex; /* Flexbox to align text */
-  justify-content: flex-end; /* push text to right side */
-  align-items: center;       /* center vertically */
+  display: flex; 
+  justify-content: flex-end; 
+  align-items: center;       
 }
 
 .introbg {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('./images/software-developer-coding-laptop.jpg');
-  background-position: left center;
+  background-position: center;
   filter: blur(4px);
 }
 
