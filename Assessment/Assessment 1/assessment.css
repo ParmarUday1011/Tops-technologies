@@ -18,7 +18,7 @@
 
 .introtext {
   position: relative;
-  background: rgba(0, 0, 0, 0.5);
+  background: black;
   padding: 20px;
   max-width: 400px;
   margin-right: 40px;  /* little gap from right edge */
@@ -161,4 +161,5 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
 }
