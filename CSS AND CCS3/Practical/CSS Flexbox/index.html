@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .container {
+      flex: 1; /* Take all available space */
+      display: flex; /* Flex container for sidebar + content */
+    }
+
+    aside {
+      background: #f4f4f4;
+      padding: 1rem;
+      width: 250px;
+    }
+
+    main {
+      background: #e2e8f0;
+      padding: 1rem;
+      flex: 1; /* Take remaining space */
+      display: flex; /* To test align-items & justify-content */
+      justify-content: center; /* Center horizontally */
+      align-items: center;     /* Center vertically */
+    }
+
+    footer {
+      margin-top: auto; /* Push footer to bottom */
+    }
+
+    /* Responsive: for smaller screens */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column; /* Stack sidebar above content */
+      }
+
+      aside {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Flexbox Layout</h1>
+  </header>
+
+  <div class="container">
+    <aside>
+      <h2>Sidebar</h2>
+      <p>Links or navigation here</p>
+    </aside>
+
+    <main>
+      <p>This is the main content area. It's centered using justify-content and align-items.</p>
+    </main>
+  </div>
+
+  <footer>
+    <p>Footer section</p>
+  </footer>
+</body>
+</html>
