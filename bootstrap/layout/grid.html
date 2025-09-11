@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container border border-dark">
+    <div class="row border border-dark">
+      <div class="col border border-dark">
+        Column
+      </div>
+      <div class="col border border-dark">
+        Column
+      </div>
+      <div class="col border border-dark">
+        Column
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <!-- equal width -->
+
+  <div class="container border border-dark">
+    <div class="row">
+      <div class="col border border-dark">
+        1 of 2
+      </div>
+      <div class="col border border-dark">
+        2 of 2
+      </div>
+    </div>
+    <div class="row border border-dark">
+      <div class="col border border-dark">
+        1 of 3
+      </div>
+      <div class="col border border-dark">
+        2 of 3
+      </div>
+      <div class="col border border-dark">
+        3 of 3
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <!-- Setting one column width -->
+
+  <div class="container border border-dark">
+    <div class="row border border-dark">
+      <div class="col border border-dark">
+        1 of 3
+      </div>
+      <div class="col-6 border border-dark">
+        2 of 3 (wider)
+      </div>
+      <div class="col border border-dark">
+        3 of 3
+      </div>
+    </div>
+    <div class="row border border-dark">
+      <div class="col border border-dark">
+        1 of 3
+      </div>
+      <div class="col-5 border border-dark">
+        2 of 3 (wider)
+      </div>
+      <div class="col border border-dark">
+        3 of 3
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <!-- Variable width content -->
+
+  <div class="container border border-dark">
+    <div class="row justify-content-md-center border border-dark">
+      <div class="col col-lg-2 border border-dark">
+        1 of 3
+      </div>
+      <div class="col-md-auto border border-dark">
+        Variable width content
+      </div>
+      <div class="col col-lg-2 border border-dark">
+        3 of 3
+      </div>
+    </div>
+    <div class="row border border-dark">
+      <div class="col border border-dark">
+        1 of 3
+      </div>
+      <div class="col-md-auto border border-dark">
+        Variable width content
+      </div>
+      <div class="col col-lg-2 border border-dark">
+        3 of 3
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <!-- All breakpoint -->
+
+  <div class="container border border-dark">
+    <div class="row border border-dark">
+      <div class="col border border-dark">col</div>
+      <div class="col border border-dark">col</div>
+      <div class="col border border-dark">col</div>
+      <div class="col border border-dark">col</div>
+    </div>
+    <div class="row border border-dark">
+      <div class="col-8 border border-dark">col-8</div>
+      <div class="col-4 border border-dark">col-4</div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <!-- Stacked to horizontal -->
+
+  <div class="container border border-dark">
+    <div class="row border border-dark">
+      <div class="col-sm-8 border border-dark">col-sm-8</div>
+      <div class="col-sm-4 border border-dark">col-sm-4</div>
+    </div>
+    <div class="row border border-dark">
+      <div class="col-sm border border-dark">col-sm</div>
+      <div class="col-sm border border-dark">col-sm</div>
+      <div class="col-sm border border-dark">col-sm</div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <!-- Mix and match -->
+
+  <div class="container border border-dark">
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <div class="row border border-dark">
+      <div class="col-md-8 border border-dark">.col-md-8</div>
+      <div class="col-6 col-md-4 border border-dark">.col-6 .col-md-4</div>
+    </div>
+
+    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <div class="row border border-dark">
+      <div class="col-6 col-md-  border-dark">.col-6 .col-md-4</div>
+      <div class="col-6 col-md-4 border border-dark">.col-6 .col-md-4</div>
+      <div class="col-6 col-md-4 border border-dark">.col-6 .col-md-4</div>
+    </div>
+
+    <!-- Columns are always 50% wide, on mobile and desktop -->
+    <div class="row border border-dark">
+      <div class="col-6 border border-dark">.col-6</div>
+      <div class="col-6 border border-dark">.col-6</div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <!-- Row column -->
+
+  <div class="container border border-dark">
+    <!-- <div class="row row-cols-2 border border-dark"> -->
+    <!-- <div class="row row-cols-3 border border-dark"> -->
+    <!-- <div class="row row-cols-auto border border-dark"> -->
+    <!-- <div class="row row-cols-4 border border-dark"> -->
+    <div class="row row-cols-4 border border-dark">
+      <div class="col border border-dark">Column</div>
+      <div class="col border border-dark">Column</div>
+      <div class="col border border-dark">Column</div>
+      <!-- <div class="col-6 border border-dark">Column</div> -->
+      <div class="col border border-dark">Column</div>
+    </div>
+</div>
+
+
+<br><br><br>
+
+<!-- Nesting -->
+
+<div class="container border border-dark">
+  <div class="row border border-dark">
+    <div class="col-sm-3 border border-dark">
+      Level 1: .col-sm-3
+    </div>
+    <div class="col-sm-9 border border-dark">
+      <div class="row border border-dark">
+        <div class="col-8 col-sm-6 border border-dark">
+          Level 2: .col-8 .col-sm-6
+        </div>
+        <div class="col-4 col-sm-6 border border-dark">
+          Level 2: .col-4 .col-sm-6
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br><br>
+</body>
+
+</html>

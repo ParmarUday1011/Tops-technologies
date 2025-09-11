@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Columns</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body>
+
+  <!-- Vertical alignment -->
+
+    <div class="container border border-primary">
+  <div class="row align-items-start border border-danger">
+    <div class="col border border-success">
+      One of three columns
+    </div>
+    <div class="col border border-warning">
+      One of three columns
+    </div>
+    <div class="col border border-info">
+      One of three columns
+    </div>
+  </div>
+  <div class="row align-items-center border border-secondary">
+    <div class="col border border-dark">
+      One of three columns
+    </div>
+    <div class="col border border-light">
+      One of three columns
+    </div>
+    <div class="col border border-muted">
+      One of three columns
+    </div>
+  </div>
+  <div class="row align-items-end border border-dark">
+    <div class="col border border-primary">
+      One of three columns
+    </div>
+    <div class="col border border-secondary">
+      One of three columns
+    </div>
+    <div class="col border border-success">
+      One of three columns
+    </div>
+  </div>
+</div>
+
+<br><br><br>
+
+<!-- Horizontal alignment -->
+
+<div class="container border border-primary">
+  <div class="row justify-content-start border border-danger">
+    <div class="col-4 border border-success">
+      One of two columns
+    </div>
+    <div class="col-4 border border-warning">
+      One of two columns
+    </div>
+  </div>
+  <div class="row justify-content-center border border-secondary">
+    <div class="col-4 border border-info">
+      One of two columns
+    </div>
+    <div class="col-4 border border-dark">
+      One of two columns
+    </div>
+  </div>
+  <div class="row justify-content-end border border-success">
+    <div class="col-4 border border-light">
+      One of two columns
+    </div>
+    <div class="col-4 border border-muted">
+      One of two columns
+    </div>
+  </div>
+  <div class="row justify-content-around border border-warning">
+    <div class="col-4">
+      One of two columns
+    </div>
+    <div class="col-4 border border-primary">
+      One of two columns
+    </div>
+  </div>
+  <div class="row justify-content-between border border-info">
+    <div class="col-4 border border-secondary">
+      One of two columns
+    </div>
+    <div class="col-4 border border-success">
+      One of two columns
+    </div>
+  </div>
+  <div class="row justify-content-evenly border border-dark">
+    <div class="col-4 border border-warning">
+      One of two columns
+    </div>
+    <div class="col-4 border border-info">
+      One of two columns
+    </div>
+  </div>
+</div>
+  <br><br><br>
+
+  <!-- Column wrapping -->
+
+  <div class="container border border-primary">
+  <div class="row">
+    <div class="col-9 border border-danger">.col-9</div>
+    <div class="col-4 border border-dark">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+    <div class="col-6 border border-success">.col-6<br>Subsequent columns continue along the new line.</div>
+  </div>
+</div>
+
+<br><br><br>
+
+<!-- Column breaks -->
+
+<div class="container border border-primary">
+  <div class="row border border-danger">
+    <div class="col-6 col-sm-3 border border-warning">.col-6 .col-sm-3</div>
+    <div class="col-6 col-sm-3 border border-success">.col-6 .col-sm-3</div>
+
+    <!-- Force next columns to break to new line -->
+    <div class="w-100"></div>
+
+    <div class="col-6 col-sm-3 border border-danger">.col-6 .col-sm-3</div>
+    <div class="col-6 col-sm-3 border border-warning">.col-6 .col-sm-3</div>
+  </div>
+</div>
+
+<br><br><br>
+
+<!-- Order classes-->
+
+<div class="container border border-primary">
+  <div class="row border border-danger">
+    <div class="col border border-success">
+      First in DOM, no order applied
+    </div>
+    <div class="col order-5 border border-warning">
+      Second in DOM, with a larger order
+    </div>
+    <div class="col order-1 border border-info">
+      Third in DOM, with an order of 1
+    </div>
+  </div>
+</div>
+
+<br><br><br>
+
+<!-- Offset classes -->
+
+<div class="container border border-primary">
+  <div class="row border border-danger">
+    <div class="col-md-4 border border-danger">.col-md-4</div>
+    <div class="col-md-4 offset-md-4 border border-dark">.col-md-4 .offset-md-4</div>
+  </div>
+  <div class="row border border-secondary">
+    <div class="col-md-3 offset-md-3 border border-danger">.col-md-3 .offset-md-3</div>
+    <div class="col-md-3 offset-md-3 border border-success">.col-md-3 .offset-md-3</div>
+  </div>
+  <div class="row border border-success">
+    <div class="col-md-6 offset-md-3 border border-dark">.col-md-6 .offset-md-3</div>
+  </div>
+</div>
+
+<br><br><br>
+
+<!-- Margin utilities -->
+
+<div class="container border border-primary">
+  <div class="row border border-danger">
+    <div class="col-md-4 border border-warning">.col-md-4</div>
+    <div class="col-md-4 ms-auto border border-danger">.col-md-4 .ms-auto</div>
+  </div>
+  <div class="row border border-secondary">
+    <div class="col-md-3 ms-md-auto border border-dark">.col-md-3 .ms-md-auto</div>
+    <div class="col-md-3 ms-md-auto border border-warning">.col-md-3 .ms-md-auto</div>
+  </div>
+  <div class="row border border-success">
+    <div class="col-auto me-auto border border-dark">.col-auto .me-auto</div>
+    <div class="col-auto border border-danger">.col-auto</div>
+  </div>
+</div>
+
+<br><br><br>
+
+<!-- Standalone column class -->
+
+<div class="col-3 bg-light p-3 border border-danger">
+  .col-3: width of 25%
+</div>
+<div class="col-sm-9 bg-light p-3 border border-dark">
+  .col-sm-9: width of 75% above sm breakpoint
+</div>
+
+<br><br><br><br>
+
+<!-- Standalone column classes whith image -->
+
+<div class="clearfix border border-primary">
+  <img src="..." class="col-md-6 float-md-end mb-3 ms-md-3 border border-danger" alt="...">
+
+  <p>
+    A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
+  </p>
+
+  <p>
+    As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would look with some actual content in here, rather than just this boring placeholder text that goes on and on, but actually conveys no tangible information at. It simply takes up space and should not really be read.
+  </p>
+
+  <p>
+    And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
+  </p>
+</div>
+
+<br><br><br>
+</body>
+</html>
