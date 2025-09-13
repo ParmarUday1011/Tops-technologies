@@ -10,7 +10,7 @@ body {
   background: #f5f8fa;
   border-radius: 20px;
   padding: 40px 30px;
-  width: 400px;
+  width: 350px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
@@ -19,7 +19,7 @@ body {
   background: #1da1f2;
   width: 70px;
   height: 70px;
-  border-radius: 50%;
+  border-radius: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,20 +37,12 @@ body {
   margin-bottom: 25px;
   font-weight: 700;
   text-align: center;
-  color: #343a40;
-}
-
-.twitter-logo {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 20px;
 }
 
 .form-control {
   border-radius: 50px;
   padding-left: 50px;
   height: 45px;
-
 }
 
 .input-icon-wrapper {
@@ -67,7 +59,7 @@ body {
 }
 
 .btn {
-  border:none;
+  border: none;
   border-radius: 180px;
   width: 150px;
   color: white;
@@ -82,7 +74,7 @@ body {
 .login-link a {
   color: rgb(12, 186, 255);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 15px;
   margin: 0 10px;
 }
 
@@ -92,27 +84,53 @@ body {
 }
 
 @media (max-width: 425px) {
-   .login-container {
-        margin-top: 50px;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 20px;
-        border: 1px solid hsl(0, 100%, 100%);
-        border-radius: 20px;
-        text-align: center;
+  .login-container {
+    margin-top: 50px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border: 1px solid hsl(0, 100%, 100%);
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .btn {
+    border: none;
+    border-radius: 180px;
+    width: 100%;
+    color: white;
+    background-color: rgb(12, 186, 255)
+  }
+
+  .btn:hover {
+    background-color: rgb(79, 178, 240);
+    color: white;
   }
 }
 
 @media (max-width: 320px) {
   .login-container {
-     margin-top: 50px;
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 20px;
-        border: 1px solid hsl(0, 100%, 100%);
-        border-radius: 20px;
-        text-align: center;
+    margin-top: 50px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border: 1px solid hsl(0, 100%, 100%);
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .btn {
+    border: none;
+    border-radius: 180px;
+    width: 100%;
+    color: white;
+    background-color: rgb(12, 186, 255)
+  }
+
+  .btn:hover {
+    background-color: rgb(79, 178, 240);
+    color: white;
   }
 }
