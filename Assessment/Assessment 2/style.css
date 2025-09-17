@@ -1,8 +1,6 @@
 body {
   background-color: #e6ecf0;
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
 }
 
@@ -23,7 +21,6 @@ body {
   color: white;
   font-size: 30px;
 }
-
 
 .login-title {
   font-weight: 700;
@@ -63,7 +60,6 @@ body {
 
 .login-link a:hover {
   text-decoration: underline;
-
 }
 
 @media (max-width: 425px) {
