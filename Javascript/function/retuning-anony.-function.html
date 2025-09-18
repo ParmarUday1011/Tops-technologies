@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>passing Anonymous function</title>
+</head>
+<body>
+    <script>
+        function ud (a){
+            return function (c){
+                return a+c;
+            };
+            var p = (ud(10));
+            document.writel(p(10));
+        }
+
+
+        // function disp(a){
+		// 		return function(b){
+		// 			return a+b;
+		// 		};
+		// 	}
+		// 	var af = (disp(10));
+		// 	document.write(af(20));
+    </script>
+</body>
+</html>
