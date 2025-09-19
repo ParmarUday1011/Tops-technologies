@@ -1,97 +1,89 @@
 body {
-  background-color: #e6ecf0;
-  display: flex;
-  height: 100vh;
+  background-color: #e6ecf0; 
+  display: flex;              
+  height: 100vh;               /* Full viewport height */
 }
 
 .login-container {
-  background: #f5f8fa;
-  border-radius: 20px;
-  padding: 40px 30px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  background: #f5f8fa;        
+  border-radius: 20px;         
+  padding: 40px 30px;          /* Space inside box */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); /* Subtle shadow effect   TRB */ 
 }
 
 .logo {
-  background: #1da1f2;
-  border-radius: 70%;
-  margin: 0 auto 15px;
+  background: #1da1f2;       
+  border-radius: 70%;          /* Makes it circular */
+  margin: 0 auto 15px;         /* Centers logo and adds space below */
 }
 
 .logo i {
-  color: white;
-  font-size: 30px;
+  color: white;                /* White Twitter bird   default black */
+  font-size: 30px;             /* Bigger size for visibil */
 }
 
 .login-title {
-  font-weight: 700;
+  font-weight: 700px;           
 }
 
 .form-control {
-  border-radius: 50px;
-  height: 45px;
+  border-radius: 50px;         /* Rounded input fields */
+  height: 45px;                
 }
 
 .input-icon-wrapper i {
-  top: 50%;
-  left: 15px;
-  transform: translateY(-50%);
-  color: #6c757d;
-  font-size: 1.2rem;
+                              /* This positions the icon inside the input field */
+  top: 20%;                    /* Push to middle vertically */
+  left: 15px;                  /* Push from left side */
+  color: #6c757d;              /* Grayish color for icon */
+  font-size: 19px;           /* Slightly larger icon size */
 }
 
 .btn {
-  border: none;
-  border-radius: 180px;
-  width: 150px;
-  color: white;
-  background-color: rgb(12, 186, 255)
+  border: none;                /* Removes border */
+  border-radius: 180px;        /* Fully rounded button */
+  width: 150px;              
+  color: white;              
+  background-color: rgb(12, 186, 255);
 }
 
 .btn:hover {
-  background-color: rgb(79, 178, 240);
+  background-color: rgb(79, 178, 240); /* Slightly darker blue */
   color: white;
 }
 
 .login-link a {
-  color: rgb(12, 186, 255);
-  font-size: 15px;
-  margin: 0 10px;
+   color: rgb(12, 186, 255);   /* Blue text of forgot and signup link */
+  font-size: 15px;             /* Small font */
+  margin: 10px;              /* Space between links */
 }
 
 .login-link a:hover {
-  text-decoration: underline;
+  text-decoration: underline;      /* Underline on hover */
 }
+
 
 @media (max-width: 425px) {
   .login-container {
-    margin-top: 50px;
-    width: 90%;
-    margin-left: auto;
+    margin-top: 50px;          /* Push down from top */
+    width: 90%;                /* Container takes almost full width */
+    margin-left: auto;         /* Center horizontally */
     margin-right: auto;
-    padding: 20px;
-    border: 1px solid hsl(0, 100%, 100%);
-    border-radius: 20px;
-    text-align: center;
+    padding: 20px;             /* Smaller padding */
+    border: 1px solid hsl(0, 100%, 100%); /* White border */
+    border-radius: 20px;       /* Rounded corners */
+    text-align: center;        /* Center text */
   }
 
   .btn {
-    border: none;
-    border-radius: 180px;
-    width: 100%;
-    color: white;
-    background-color: rgb(12, 186, 255)
-  }
-
-  .btn:hover {
-    background-color: rgb(79, 178, 240);
-    color: white;
+    width: 100%;               /* Button full width for mobile */
   }
 }
 
 @media (max-width: 320px) {
   .login-container {
     margin-top: 50px;
-    width: 70%;
+    width: 70%;                /* Slightly narrower for tiny screens */
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
@@ -101,15 +93,6 @@ body {
   }
 
   .btn {
-    border: none;
-    border-radius: 180px;
-    width: 100%;
-    color: white;
-    background-color: rgb(12, 186, 255)
-  }
-
-  .btn:hover {
-    background-color: rgb(79, 178, 240);
-    color: white;
+    width: 100%;              
   }
 }
