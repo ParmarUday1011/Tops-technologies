@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collapse</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="cointainer mt-5 p-5 border border-danger">
+      <div class="row">
+        <div class="col-12">
+
+          <p class="border border-dark">
+            <a
+              class="btn btn-primary"
+              data-bs-toggle="collapse"
+              href="#collapseExample"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              Link with href
+            </a>
+            <button
+              class="btn btn-dark"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseExample"
+              aria-expanded="fals"
+              aria-controls="collapseExample"
+            >
+              Button with data-bs-target
+            </button>
+          </p>
+          <div class="collapse border border-warning" id="collapseExample">
+            <div class="card card-body">
+              Some placeholder content for the collapse component. This panel is
+              hidden by default but revealed when the user activates the
+              relevant trigger.
+            </div>
+          </div>
+
+
+          <!-- Horizontal -->
+
+          <p class="border">
+            <button
+              class="btn btn-primary"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseWidthExample"
+              aria-expanded="false"
+              aria-controls="collapseWidthExample"
+            >
+              Toggle width collapse
+            </button>
+          </p>
+          <div style="min-height: 120px">
+            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+              <div class="card card-body" style="width: 300px">
+                This is some placeholder content for a horizontal collapse. It's
+                hidden by default and shown when triggered.
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+    <script src="../js/bootstrap.bundle.js"></script>
+  </body>
+</html>
