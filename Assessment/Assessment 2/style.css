@@ -32,7 +32,7 @@ body {
 }
 
 .input-icon-wrapper i {
-                              /* This positions the icon inside the input field */
+  /* This positions the icon inside the input field */
   top: 20%;                    /* Push to middle vertically */
   left: 15px;                  /* Push from left side */
   color: #6c757d;              /* Grayish color for icon */
