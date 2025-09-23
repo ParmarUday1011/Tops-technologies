@@ -1,0 +1,61 @@
+.flex-container {
+  display: flex;
+  /* flex-direction: column; */
+  /* flex-direction:column-reverse ; */
+  /* flex-wrap: wrap-reverse; */
+  /* flex-flow: column wrap ; */
+  /* justify-content: center; */
+  /* justify-content: flex-end; */
+  /* justify-content: flex-start; */
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  /* justify-content: space-evenly; */
+  /* align-items: center; */
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  /* align-items: stretch; */
+  /* align-items: baseline; */
+  /* align-items: normal; */
+  /* align-content: center; */
+  /* align-content: stretch; */
+  /* align-content: flex-start; */
+  /* align-content: flex-end; */
+  /* align-content: space-around; */
+  /* align-content: space-between; */
+  /* align-content: space-evenly; */
+
+  background-color:cadetblue;
+
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item-left {
+  flex: 50%;
+}
+
+.flex-item-right {
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
+}
+
