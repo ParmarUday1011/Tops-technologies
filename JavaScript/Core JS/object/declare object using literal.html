@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declare Object Using Literal</title>
+</head>
+<body>
+    <script>
+        var ud = {}
+        ud['uday'] = 10
+        ud['parmar'] = 11
+        document.writeln(ud['uday'] , "<br>")
+
+        document.writeln("<br>")
+        document.writeln("<br>")
+
+        var ud = {}
+        ud['uday'] = 10
+        ud['total'] = function(){return(10+11+2003)}
+        document.writeln(ud.total() , "<br>")
+
+        document.writeln("<br>")
+        document.writeln("<br>")
+
+        var ud = {uday:10,parmar:11,udayparmar:2003}
+        document.writeln(ud['udayparmar'])
+
+         document.writeln("<br>")
+        document.writeln("<br>")
+
+        var ud = {uday:10,parmar:11,udayparmar:2003,total:function(){return(10+11+2003)}}
+        document.writeln(ud['total'])
+    </script>
+</body>
+</html>
