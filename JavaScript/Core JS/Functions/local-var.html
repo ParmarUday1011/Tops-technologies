@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Varibale</title>
+</head>
+<body>
+    <script>
+         var i=2003 //globle
+        function u(){
+            var d=10; //local
+            document.writeln(i , "<br>") //i is accessed
+            document.writeln(d , "<br>") //j 
+        }
+        u();
+        document.writeln(i , "<br>") // i is still access
+        document.writeln(d , "<br>") // j is not 
+
+        function p(){
+            document.writeln(i ,  "<br>") //i thase
+            document.writeln(d ,  "<br>") // j nai thai
+        }
+        p();
+        if(true){
+        document.writeln(i , "<br>") // i thase
+        document.writeln(i) // j nai thai
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Scope</title>
+</head>
+<body>
+    <script>
+        if(true){
+            var i=18;    //var can be access from anywhare from inner or outer
+            document.writeln(i + "<br>")
+        }
+        document.writeln(i + "<br>")
+
+        if(true){
+            let j=20;   //let only assign to inner value it can't assign outer value
+            document.writeln(j + "<br>")
+        }
+        document.writeln(j)
+    </script>
+</body>
+</html>

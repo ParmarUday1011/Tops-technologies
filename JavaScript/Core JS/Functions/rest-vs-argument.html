@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rest vs argument</title>
+</head>
+<body>
+    <script>
+        function u(...args){
+				document.writeln(args);
+			}
+			u(10,20,30,40,50);
+			
+            document.writeln("<br>")
+
+			// Arguments Object
+			function p(arguments){
+				document.writeln(arguments);
+			}
+			p(10,20,30,40,50);
+    </script>
+</body>
+</html>

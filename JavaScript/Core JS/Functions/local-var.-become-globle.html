@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Variable become globle variable</title>
+</head>
+<body>
+    <script>
+        var i=2003 //globle
+        function u(){
+             d=10; //now it is globle      // note: removing var from starting it became globle
+            document.writeln(i , "<br>") //i is accessed
+            document.writeln(d , "<br>") //j also call
+        }
+        u();
+        document.writeln(i , "<br>") // i is still access
+        document.writeln(d , "<br>") // 
+
+        function p(){
+            document.writeln(i ,  "<br>") //i thase
+            document.writeln(d ,  "<br>") // 
+        }
+        p();
+        if(true){
+        document.writeln(i , "<br>") // i thase
+        document.writeln(i) // 
+        }
+    </script>
+</body>
+</html>
