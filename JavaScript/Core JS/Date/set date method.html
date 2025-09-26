@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set date method</title>
+</head>
+<body>
+    <script>
+        // Day as Number 1 - 31 
+			// Hours as Number 0 - 23
+			// Month as Number 0 - 11 Ex- 0 = Jan
+			// Week Day as Number 0 - 6 Ex- 0 = Sun
+			var date = new Date();
+			document.write(date + "<br>");
+			
+			date.setHours(22);
+			document.write(date + "<br>");
+			
+			date.setMinutes(56);
+			document.write(date + "<br>");
+			
+			date.setSeconds(40);
+			document.write(date + "<br>");
+			
+			date.setDate(26);
+			document.write(date + "<br>");
+			
+			date.setMonth(11);
+			document.write(date + "<br>");
+			
+			date.setFullYear(2022);
+			document.write(date + "<br>");
+			
+			date.setFullYear(2022, 3, 15);
+			document.write(date + "<br>");
+    </script>
+</body>
+</html>
