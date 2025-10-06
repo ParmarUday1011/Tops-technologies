@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetElementById</title>
+</head>
+<body>
+    <h1>hello </h1>
+    <h2>there</h2>
+    <p id="per">hello there</p>
+    <p id="pree">there hello</p>
+    <button onclick="first()">clicl me first</button>
+    <button onclick="second()">clicl me second</button> <br><br>
+    <img id="img" src="" alt="image" width="200px" height="200px" style="border: 1px solid blue;">
+
+    <script>
+        var result = document.getElementById("per");
+        // result.innerHTML="hello there i am here";
+        // result.innerHTML = "<h1>hello there i am here</h1>";
+        // result.textContent = "hello there i am here";
+        // result.textContent = "<h1>hello there i am here</h1>";
+        // Document.write(result.innerHTML);
+
+        function first(){
+            document.getElementById('img').src="https://repository-images.githubusercontent.com/539560750/278d0bbf-6aaf-4f38-a18f-e328305bcd7b";
+        }
+        function second(){
+            document.getElementById('img').src="https://ellipsiseducation.com/wp-content/uploads/2023/02/javascript-736400_1280.png";
+        }
+    </script>
+</body>
+</html>
