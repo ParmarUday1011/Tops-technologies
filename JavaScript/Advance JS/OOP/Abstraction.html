@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstraction</title>
+</head>
+<body>
+    <script>
+        // Abstraction means hiding complex logic and showing only what’s necessary.
+
+        class Vehicle{
+            startengine(){
+                throw new error("start engine must be required");
+            }
+        }
+
+        class car extends Vehicle{
+            startengine(){
+                console.log("car engine started");
+            }
+        }
+        const car1 = new car();
+        car1.startengine();
+    </script>
+</body>
+</html>

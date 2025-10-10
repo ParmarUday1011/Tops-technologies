@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorphism</title>
+</head>
+<body>
+    <script>
+        // polymorphism means same method name, different behavior depending on the object.
+
+        class shape{
+            area (){
+                return 0;
+            }
+        }
+
+        class Circle extends shape{
+            constructor(radius){
+                super();
+                this.radius=radius;
+            }
+            area(){
+                return Math.PI*this.radius*this.radius;
+            }
+        }
+        class Square extends shape{
+            constructor(side){
+                super();
+                this.side=side;
+            }
+            area(){
+                return this.side*this.side
+            }
+        }
+        const shapes = [new Circle(3) , new Square(4)]
+        shapes.forEach(shape=>{
+            console.log(shape.area());
+        })
+    </script>
+</body>
+</html>
