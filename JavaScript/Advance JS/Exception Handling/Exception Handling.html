@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling</title>
+</head>
+<body>
+    <script>
+        // Inside the try block we write those codes which can cause execption or error
+        // If any error occurs in the try block, the control is transferred to the catch block
+        try{
+            // add()
+            document.write("skipped")
+        }
+
+        // Inside the catch block we write codes which can handle the exception thrown by try block
+
+        catch(error){
+            document.write("message:"+error.message+"<br>")
+            document.write("name:"+error.name+"<br>")
+            document.write("stack:"+error.stack+"<br>")
+            document.write("message: working ")
+        }
+
+        // Inside the finally block we write code which must be executed for normal termination of application or a specific program
+		finally {
+			document.write("<br><br> Get executed whether there is exception or not <br>");
+		}
+
+		document.write("<br>I have no idea what going on above");
+
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+
+
+        // Another example
+
+        function getarea(u,p){
+            if (isNaN(u) || isNaN(p)){
+                throw "error"
+            }
+        }
+
+        try{
+            getarea(10,'ud') // it will throw error because 'ud' is not a number.
+        }
+        catch(error){
+            document.write(error)
+        }
+        document.write("<br> End of the program")
+    </script>
+</body>
+</html>
