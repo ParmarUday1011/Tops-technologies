@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict Mode</title>
+</head>
+<body>
+    <script>
+        "use strict"
+        var u=10 // u=10 it will give error because x is not declared
+        document.write(u)
+
+        document.write("<br>")
+        document.write("<br>")
+
+        u=11
+        document.write(u)
+        function p(){
+            "use strict"
+            var up=1011 // up=1011 it will give error because x is not declared
+            document.write(up)
+        }
+        p()
+
+        document.write("<br>")
+        document.write("<br>")
+
+        function pp(a,b){  //it will show error if we write duplicate parameter example (a,b,b)
+            return a+b 
+        }
+        document.write(pp(10,11))
+    </script>
+</body>
+</html>
