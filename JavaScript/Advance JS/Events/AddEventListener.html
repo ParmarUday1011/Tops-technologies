@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="click">Click me !!!!</button>
+
+    <script>
+        // function btn(){
+        //     alert("clicked done")
+        // }
+        // var btnn = document.getElementById("click")
+        // btnn.addEventListener("click",function(){alert("thanks for clicking")})
+        // btnn.addEventListener("click",btn)
+
+        //another way
+         function btn1(){
+            alert("clicked done 1st time")
+        }
+        function btn2(){
+            alert("clicked done 2nd time")
+        }
+        var btnn = document.getElementById("click")
+        // btnn.addEventListener("click",function(){alert("thanks for clicking")})
+        btnn.addEventListener("click",btn1)
+        btnn.addEventListener("click",btn2)
+        btnn.removeEventListener("click",btn2)
+    </script>
+</body>
+</html>

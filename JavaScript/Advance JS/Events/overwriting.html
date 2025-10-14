@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over Writing</title>
+</head>
+<body>
+    <button id="h">click me !!</button>
+    <script>
+        // method 1
+        // function hi(){
+        //     alert("thank u")
+        // }
+        // function hi1(){
+        //     alert("thanks")
+        // }
+        // document.getElementById("h").onclick=hi
+        // document.getElementById("h").onclick=hi1
+
+        // method 2
+        function hi(){
+            alert("thank u")
+        }
+        function hi1(){
+            alert("thanks")
+        }
+        function doual(){
+            hi()
+            hi1()
+        }
+        document.getElementById("h").onclick=doual
+        
+    </script>
+</body>
+</html>
