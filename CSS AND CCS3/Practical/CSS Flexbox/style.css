@@ -30,13 +30,11 @@ footer{
 }
 
 .container{
-    flex: 1;
     display: flex;
 }
 
 aside{
-    background-color:aqua ;
-    /* padding: 15px; */
+    background-color:aqua ; 
     text-align: center;
     width: 250px;
 }
@@ -50,12 +48,6 @@ a{
     display: block;
     padding: 50px;
 
-}
-
-.cl{
-    color:antiquewhite;
-    justify-content: center;
-    margin-top: 94%;
 }
 
 main{

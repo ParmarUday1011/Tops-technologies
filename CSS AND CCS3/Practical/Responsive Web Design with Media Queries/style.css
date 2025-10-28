@@ -13,15 +13,17 @@ body {
     flex-direction: column;
 }
 
+img{
+    height:80px;
+    width:80px;
+}
+
 nav {
     background: darksalmon;
     color: white;
     padding: 2px;
     position: sticky;
-    top: 0;
-    text-align: center;
     font-size: 20px;
-    font-weight: bold;
 }
 
 .nav-container {
@@ -37,6 +39,9 @@ nav {
     display: flex;
     gap: 55px;
 }
+.nav-links:hover{
+    cursor: pointer;
+}
 
 .nav-links a {
     color: white;
@@ -45,28 +50,11 @@ nav {
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: black;
 }
 
-img{
-    height:80px;
-    width:80px;
-}
 
-footer {
-    background: darksalmon;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    position:static;
-    bottom: -125px;
-    width: 100%;
-}
-
-footer p {
-    margin: 0;
-    font-size: 1em;
-}
 
 .content{
     flex: 1;
@@ -94,6 +82,20 @@ footer p {
     transition: all 0.3s ease;
 }
 
+footer {
+    background: darksalmon;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position:static;
+    bottom: -125px;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
 
 @media (max-width: 768px) {
     nav {
