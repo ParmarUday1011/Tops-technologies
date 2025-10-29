@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Sync And Callback Hell</title>
+</head>
+
+<body>
+    <script>
+        //problem syncronous
+
+        // console.log('start');
+        // function name(pname){
+        //     setTimeout(()=>{console.log('hello!!!'); return pname}, 2000)}
+        // var person = name('uday')
+        // console.log(person);
+        // console.log('end');
+
+        // solve above problem with callback
+
+        // console.log('start');
+        // function name(pname,lname){
+        //     setTimeout(()=>{console.log("hello from");lname(pname)}, 2000)}
+        // var person = name('uday',(person)=>{console.log(person)})
+        // console.log('end');
+
+        //callback hell
+
+        // console.log('start');
+        // function name(pname, lname) {
+        //     setTimeout(() => { console.log("hello from"); lname(pname) }, 2000)
+        // }
+        // function surname(pname, lname) {
+        //     setTimeout(() => { console.log("hello from surmane"); lname(['kumar', 'parmar']) }, 1000)
+        // }
+        // var person = name('uday', (person) => { console.log(person); surname(person, (sname) => { console.log(sname) }) })
+        // console.log('end');
+
+
+    </script>
+</body>
+
+</html>
