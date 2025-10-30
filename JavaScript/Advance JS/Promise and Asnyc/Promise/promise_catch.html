@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Catch</title>
+</head>
+<body>
+    <script>
+        const udayparmar = new Promise((name,lastNanme)=>{
+            let a=false
+            if(a==true){
+                name("let a is true")
+            }else{
+                lastNanme("let a is false")
+            }
+        }).then((right)=>console.log(right)).catch((wrong)=>console.log(wrong))
+    </script>
+</body>
+</html>
