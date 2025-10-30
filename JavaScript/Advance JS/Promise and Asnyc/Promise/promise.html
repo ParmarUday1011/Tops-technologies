@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        // const uday = new Promise((name, Lname) => {
+        //     let u = true
+        //     if(u==true){
+        //         name('let u is true')
+        //     }else{
+        //         Lname('let u is false')
+        //     }
+        // })
+        // uday.then((right)=>console.log(right),(wrong)=>console.log(wrong));
+        
+
+        //another example
+
+        const parmar = new Promise((Fname,Lname) => {
+        let p=false
+        if(p==true){
+            Fname("let p is true")
+        }else{
+            Lname("let p is false")
+        }
+    }).then((right)=>console.log(right),(wrong)=>console.log(wrong))
+    </script>
+</body>
+</html>
