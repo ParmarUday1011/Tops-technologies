@@ -53,7 +53,7 @@ h1 {
 /* When hovered: show & animate the gradient */
 .grid:hover::after {
     opacity: 20;
-    animation: animate 6s linear infinite;
+    animation: animate 6s  infinite;
 }
 
 @keyframes animate {
