@@ -8,9 +8,18 @@
 <body>
     <script>
         console.log("start");
-        
+        function ud(p){
+            return new Promise((name,Lname) =>{
+                setTimeout(()=>{console.log("hello"), name(p)},2000)})
+            }
+
+        function du(a){
+            return new Promise((name,Lname)=>{
+                setTimeout(()=>{console.log("hello2"), name(["uday","parmar"])},1000)})
+        }
+        ud('kumar').then(pd=>du(pd)).then(pp=>console.log(pp))
         console.log("end");
-        
+
     </script>
 </body>
 </html>

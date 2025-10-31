@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+<body>
+    <script>
+        console.log("start");
+        function ud(p){
+            return new Promise((name,Lname)=>{
+                setTimeout(()=>{console.log("hello"),name(p)},2000)
+            })
+        }
+
+        function pd (d){
+            return new Promise ((name,Lnale)=>{
+                setTimeout(()=>{console.log("hello2");console.log(d);name(["uday","parmar"]),1000})
+            })
+        }
+
+        async function dd(){
+            let uu= await ud("uday")
+            let dd=await pd(uu)
+            console.log(dd);
+        }
+        dd();
+        console.log("end");
+        
+        
+    </script>
+</body>
+</html>
