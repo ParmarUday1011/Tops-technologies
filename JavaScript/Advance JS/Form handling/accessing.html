@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Hendeling Accessing</title>
+</head>
+<body>
+    <form action="" id="ud" name="pu">
+        username : <input type="text" name="un" id="uni">
+        <br><br><br>
+        password : <input type="text" name="pass" id="passi">
+        <br><br><br>
+        <input type="button" name="btn" value="reset" onclick="resetform()"> 
+    </form>
+    <hr><hr>
+        <form action="" id="ud1" name="pu1">
+        username : <input type="text" name="un1" id="uni1">
+        <br><br><br>
+        password : <input type="text" name="pass1" id="passi1">
+        <br><br><br>
+        <input type="button" name="btn" value="reset" onclick="resetform()"> 
+    </form>
+    <script>
+        // With Index Number
+		// 		var mform = document.forms[0];
+		// 		console.log(mform);
+		
+				// var yform = document.forms[1];
+				// console.log(yform);
+
+		
+				// With Name attribute using square bracket
+				// var mform = document.forms['pu'];
+				// console.log(mform);
+		
+				// var yform = document.forms['pu1'];
+				// console.log(yform);
+		
+	
+				// With Name attribute using dot
+				// var mform = document.pu;
+				// console.log(mform);
+		
+				// var yform = document.pu1;
+				// console.log(yform);
+		
+
+		
+				// With getElementById
+				// var mform = document.getElementById("pu");
+				// console.log(mform);
+
+				// var yform = document.getElementById("pu1");
+				// console.log(yform);
+    </script>
+</body>
+</html>

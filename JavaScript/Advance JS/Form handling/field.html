@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handeling accessing field</title>
+</head>
+<body>
+  <form action="" id="ud" name="pu">
+        username : <input type="text" name="un" id="uni">
+        <br><br><br>
+        password : <input type="text" name="pass" id="passi">
+        <br><br><br>
+        <input type="button" name="btn" value="reset" onclick="resetform()"> 
+    </form>
+    <hr><hr>
+        <form action="" id="ud1" name="pu1">
+        username : <input type="text" name="un1" id="uni1">
+        <br><br><br>
+        password : <input type="text" name="pass1" id="passi1">
+        <br><br><br>
+        <input type="button" name="btn" value="reset" onclick="resetform()"> 
+    </form>
+
+    <script>
+        //getelementbyid
+        var usrname = document.getElementById("uni");
+		console.log(usrname);
+        // console.log(usrname.name);
+        // console.log(usrname.type);
+        // console.log(usrname.id);
+
+
+        //element
+        var usrname = document.pu1.elements[1];
+		// console.log(usrname);
+        // console.log(usrname.name);
+        // console.log(usrname.type);
+        // console.log(usrname.id);
+    </script>
+</body>
+</html>

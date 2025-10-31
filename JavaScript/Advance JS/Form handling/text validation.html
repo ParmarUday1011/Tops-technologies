@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+</head>
+<body>
+
+    <form action="" name="myform">
+		Password: <input type="text" name="u_field"><small id="u_small"> </small> <br><br>
+
+		<input type="submit" name="sbtn" value="Submit">
+	</form>
+
+    <script>
+        function inputvalid(){
+            var format=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if(format.test(document.myform.u_field.value)){
+                	// document.myform.u_field.style.backgroundColor = 'green';
+				document.getElementById("u_small").textContent = " Username is Valid";
+				document.getElementById("u_small").style.color = "green";
+			} else {
+				// document.myform.u_field.style.backgroundColor = 'red';
+				document.getElementById("u_small").textContent = " Username is Invalid";
+				document.getElementById("u_small").style.color = "red";
+            }
+        }
+        document.myform.u_field.addEventListener("keyup", inputvalid);
+
+        
+        //(?=.*[a-z]): Asserts at least one lowercase letter.
+        // (?=.*[A-Z]): Asserts at least one uppercase letter.
+        // (?=.*\d): Asserts at least one digit.
+        // (?=.*[@$!%*?&]): Asserts at least one special character.
+        // [A-Za-z\d@$!%*?&]{8,}: Matches at least 8 characters consisting of alphanumeric and specified special characters.
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form hendeling properties</title>
+</head>
+<body>
+    <form action="" id="ud" name="pu">
+        username : <input type="text" name="un" id="uni">
+        <br><br><br>
+        password : <input type="text" name="pass" id="passi">
+        <br><br><br>
+        <input type="button" name="btn" value="reset" onclick="resetform()"> 
+    </form>
+    <script>
+        let form =document.ud
+        // console.dir(pu)
+        // console.log(pu.length);
+        // console.log(pu.elements[1]);
+        // console.log(pu.method);
+        // console.log(pu.action);
+        function resetform(){
+            ud.reset()
+        }
+    </script>
+</body>
+</html>
