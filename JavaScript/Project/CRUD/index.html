@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDE Operations</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <fieldset class="fs">
+      <h2>CRUD Operation</h2>
+      <form id="crud" class="form" name="fcrud"">
+        <label>Username :</label>
+        <input type="text" id="iuser"/>
+        <br><br>
+        <label>Password :</label>
+        <input type="text" id="pass"/>
+        <br><br>
+
+        <button class="submit" type="submit" onclick="reload()">Submit</button>
+        <button class="clr" type="button" onclick="resetForm()">Reset</button>
+
+      </form>
+    </fieldset>
+
+    <div id="msg" class="msg"></div><br>
+
+    <br><br><br><br>
+
+    <fieldset class="fs1">
+      <h2 id="h2">Data Coming From LocalStorage</h2>
+      <table border="2" class="tbl" id="datatbl">
+        <tr>
+          <td class="tuser">Username</td>
+          <td class="tpass">Password</td>
+          <td class="ted">Edit & Delete</td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <script src="script.js"></script>
+  </body>
+</html>
