@@ -23,17 +23,16 @@ function resetForm() {
 
 function submitForm() {
   event.preventDefault();
-
-  var datasend = datasubmit(); // collect form data
-  console.log(datasend);
   
-    var existingData = JSON.parse(localStorage.getItem("HotelData")) || [];
-  existingData.push(newData);
-  localStorage.setItem("HotelData", JSON.stringify(datasend)); // save as one array
-
+  // collect form data as array
+  var datasend = datasubmit();
+  
+  // store in localStorage as JSON string
+  localStorage.setItem("HotelData", JSON.stringify(datasend));  //js ma thi object ma data convert kare che
+  
+  console.log("Saved:", datasend);
   alert("Data saved successfully!");
-  resetForm()
-  return false;
+  resetForm();
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -240,28 +239,33 @@ function datasubmit() {
   return data;
 }
 
-//Localstorage function to store data in browser
-function getdatals(datasend) {
-  var name = localStorage.setItem("Name", datasend[0]);
-  var phone = localStorage.setItem("Phone", datasend[1]);
-  var email = localStorage.setItem("Email", datasend[2]);
-  var addrss = localStorage.setItem("Address", datasend[3]);
-  var aadhar = localStorage.setItem("Aadher", datasend[4]);
-  var chin = localStorage.setItem("Checkin", datasend[5]);
-  var chout = localStorage.setItem("Checkout", datasend[6]);
-  var nadult = localStorage.setItem("Noadult", datasend[7]);
-  var purpos = localStorage.setItem("Purpose", datasend[8]);
+// Save individual fields to localStorage and return them (fixed keys)
+function setdata(datasend) {
+  // store each field under its own key
+  localStorage.setItem("Name", datasend[0]);
+  localStorage.setItem("Phone", datasend[1]);
+  localStorage.setItem("Email", datasend[2]);
+  localStorage.setItem("Address", datasend[3]);
+  localStorage.setItem("Aadher", datasend[4]);
+  localStorage.setItem("Checkin", datasend[5]);
+  localStorage.setItem("Checkout", datasend[6]);
+  localStorage.setItem("Noadult", datasend[7]);
+  localStorage.setItem("Purpose", datasend[8]);
 
-  var name1 = localStorage.getItem("Name", name);
-  var phone1 = localStorage.getItem("Name", phone);
-  var email1 = localStorage.getItem("Name", email);
-  var addrss1 = localStorage.getItem("Name", addrss);
-  var aadhar1 = localStorage.getItem("Name", aadhar);
-  var chin1 = localStorage.getItem("Name", chin);
-  var chout1 = localStorage.getItem("Name", chout);
-  var nadult1 = localStorage.getItem("Name", nadult);
-  var purpos1 = localStorage.getItem("Name", purpos);
+  // read them back using the correct keys
+  var name1 = localStorage.getItem("Name");
+  var phone1 = localStorage.getItem("Phone");
+  var email1 = localStorage.getItem("Email");
+  var addrss1 = localStorage.getItem("Address");
+  var aadhar1 = localStorage.getItem("Aadher");
+  var chin1 = localStorage.getItem("Checkin");
+  var chout1 = localStorage.getItem("Checkout");
+  var nadult1 = localStorage.getItem("Noadult");
+  var purpos1 = localStorage.getItem("Purpose");
+
   var send = [name1, phone1, email1, addrss1, aadhar1, chin1, chout1, nadult1, purpos1];
+  // Also store the full record under HotelData so table.html can read it
+  // localStorage.setItem("HotelData", JSON.stringify(datasend));  // convert into js to object
   return send;
 }
 
@@ -277,13 +281,4 @@ function getdatals(detals) {
   cell8 = inrow.insertCell(7).innerHTML=detals[7];
   cell9 = inrow.insertCell(8).innerHTML=detals[8];
 
-  // Delete button in last cell
-  var delCell = inrow.insertCell(9);
-  delCell.innerHTML = '<button type="button" onclick="deleteRow(this)">Delete</button>';
-}
-
-// helper to delete a row (called by the button)
-function deleteRow(btn) {
-  var row = btn.parentNode.parentNode;
-  row.parentNode.removeChild(row);
 }

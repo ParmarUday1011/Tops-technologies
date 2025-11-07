@@ -28,7 +28,7 @@
      <script>
 document.addEventListener("DOMContentLoaded", function () {
   var table = document.getElementById("datatbl");
-  var data = JSON.parse(localStorage.getItem("HotelData"));
+  var data = JSON.parse(localStorage.getItem("HotelData")); //object ma thi js ma data convert kare che
 
   if (data && table) {
     var newRow = table.insertRow();
