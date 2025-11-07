@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Data Coming From Localstorag</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <fieldset class="fs1">
+      <h2 id="h2">Data Coming From LocalStorage</h2>
+      <table border="2" class="tbl" id="datatbl">
+        <tr>
+          <td class="Fname">Full Name</td>
+          <td class="number">Phone Number</td>
+          <td class="email">Email Address</td>
+          <td class="add">Address</td>
+          <td class="aadher">Aadhar Card Number</td>
+          <td class="cin">Check In Date</td>
+          <td class="cout">Check Out Date</td>
+          <td class="adult">No. Of Adults</td>
+          <td class="pov">Purpose Of Visit</td> 
+        </tr>
+      </table>
+    </fieldset>
+
+    <!-- <script src="./Validation.js"></script> -->
+     <script>
+document.addEventListener("DOMContentLoaded", function () {
+  var table = document.getElementById("datatbl");
+  var data = JSON.parse(localStorage.getItem("HotelData"));
+
+  if (data && table) {
+    var newRow = table.insertRow();
+    for (let i = 0; i < data.length; i++) {
+      let cell = newRow.insertCell(i);
+      cell.innerHTML = data[i];
+    }
+  } else {
+    console.log("No data found in localStorage or table missing.");
+  }
+});
+</script>
+
+</body>
+</html>
