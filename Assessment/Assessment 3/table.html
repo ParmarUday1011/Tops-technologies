@@ -25,22 +25,36 @@
     </fieldset>
 
     <!-- <script src="./Validation.js"></script> -->
-     <script>
+    <script>
 document.addEventListener("DOMContentLoaded", function () {
   var table = document.getElementById("datatbl");
-  var data = JSON.parse(localStorage.getItem("HotelData")); //object ma thi js ma data convert kare che
+  var allData = JSON.parse(localStorage.getItem("HotelData")) || [];
 
-  if (data && table) {
-    var newRow = table.insertRow();
-    for (let i = 0; i < data.length; i++) {
-      let cell = newRow.insertCell(i);
-      cell.innerHTML = data[i];
-    }
-  } else {
-    console.log("No data found in localStorage or table missing.");
+  if (allData.length === 0) {
+    // Create a new row with a message spanning all columns
+    var messageRow = table.insertRow();
+    var messageCell = messageRow.insertCell();
+    messageCell.colSpan = 9; // Span across all 9 columns
+    messageCell.textContent = "No data is present in the table";
+    messageCell.style.textAlign = "center";
+    messageCell.style.padding = "20px";
+    messageCell.style.fontSize = "18px";
+    messageCell.style.fontWeight = "bold";
+    messageCell.style.color = "#008000"; // Adding green color
+    return;
   }
+
+  allData.forEach(function (record) {
+    var newRow = table.insertRow();
+    record.forEach(function (value) {
+      var cell = newRow.insertCell();
+      cell.textContent = value;
+    });
+  });
 });
 </script>
 
+
 </body>
+
 </html>

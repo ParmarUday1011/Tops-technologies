@@ -28,7 +28,7 @@ a{
     margin-top: 2%;
     text-align: center;
     background-color: coral;
-    margin: 2% 2% ;
+    margin: 2% 0%;
 }
 
 #h2{
@@ -37,14 +37,14 @@ a{
 
 .tbl{
     border: 1px solid black;
-    background-color:lightgreen;
-    display: flex;
+    background-color:lightgreen;;
+    display: flexbox;
     align-items: center;
     justify-content: center;
     margin-top: 2%;
-    /* margin-bottom: 2%; */
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
 }
 
 tr{
@@ -55,4 +55,13 @@ th, td{
     border: 1px solid black;
     padding: 8px 12px;
     text-align: center;
+}
+
+.no-data-message {
+    color: #008000;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: green;
 }

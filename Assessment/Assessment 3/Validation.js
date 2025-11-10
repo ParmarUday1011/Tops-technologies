@@ -21,19 +21,72 @@ function resetForm() {
 }
 
 
+// function submitForm() {
+//   event.preventDefault();
+  
+
+//   var fname = document.getElementById("fname").value;
+//   var phone = document.getElementById("phone").value;
+//   var email = document.getElementById("email").value;
+//   var add = document.getElementById("add").value;
+//   var adhno = document.getElementById("adhno").value;
+//   var indate = document.getElementById("indate").value;
+//   var outdate = document.getElementById("outdate").value;
+//   var adult = document.getElementById("Adult").value;
+//   var pov = document.getElementById("pov").value;
+
+//   // Check if any field is empty
+//   if (!fname || !phone || !email || !add || !adhno || !indate || !outdate || !adult || !pov) {
+//     alert("Please fill all fields in the form!");
+//     return; // Stop form submission
+//   }
+//   // collect form data as array
+//   var datasend = datasubmit();
+  
+//   // store in localStorage as JSON string
+//   localStorage.setItem("HotelData", JSON.stringify(datasend));  //js ma thi object ma data convert kare che
+  
+//   console.log("Saved:", datasend);
+//   alert("Data saved successfully!");
+//   resetForm();
+// }
+
 function submitForm() {
   event.preventDefault();
+
+  var fname = document.getElementById("fname").value;
+  var phone = document.getElementById("phone").value;
+  var email = document.getElementById("email").value;
+  var add = document.getElementById("add").value;
+  var adhno = document.getElementById("adhno").value;
+  var indate = document.getElementById("indate").value;
+  var outdate = document.getElementById("outdate").value;
+  var adult = document.getElementById("Adult").value;
+  var pov = document.getElementById("pov").value;
+
+  // Check empty fields
+  if (!fname || !phone || !email || !add || !adhno || !indate || !outdate || !adult || !pov) {
+    alert("Please fill all fields!");
+    return;
+  }
+
+  // Collect form data into array
+  var datasend = [fname, phone, email, add, adhno, indate, outdate, adult, pov];
+  console.log(datasend);
   
-  // collect form data as array
-  var datasend = datasubmit();
-  
-  // store in localStorage as JSON string
-  localStorage.setItem("HotelData", JSON.stringify(datasend));  //js ma thi object ma data convert kare che
-  
-  console.log("Saved:", datasend);
+  // Get old data from localStorage or create new array
+  var existingData = JSON.parse(localStorage.getItem("HotelData")) || [];
+
+  // Add new record
+  existingData.push(datasend);
+
+  // Save it back
+  localStorage.setItem("HotelData", JSON.stringify(existingData));
+
   alert("Data saved successfully!");
   resetForm();
 }
+
 
 document.addEventListener('DOMContentLoaded', function () {
   var name = document.getElementById("fname")
@@ -280,5 +333,4 @@ function getdatals(detals) {
   cell7 = inrow.insertCell(6).innerHTML=detals[6];
   cell8 = inrow.insertCell(7).innerHTML=detals[7];
   cell9 = inrow.insertCell(8).innerHTML=detals[8];
-
 }
