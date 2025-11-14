@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table Data Coming From Localstorag</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <style>
+     
+    </style>
 </head>
 <body>
      <fieldset class="fs1">
-      <h2 id="h2">Data Coming From LocalStorage</h2>
-      <table border="2" class="tbl" id="datatbl">
+      <h2 class="name1" id="h2">Data Coming From LocalStorage</h2>
+      
+      <input type="text" id="searchInput" placeholder="Search Here">
+      
+      <table border="2" class="tbl1" id="datatbl">
         <tr>
           <td class="Fname">Full Name</td>
           <td class="number">Phone Number</td>
@@ -24,37 +30,6 @@
       </table>
     </fieldset>
 
-    <!-- <script src="./Validation.js"></script> -->
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
-  var table = document.getElementById("datatbl");
-  var allData = JSON.parse(localStorage.getItem("HotelData")) || [];
-
-  if (allData.length === 0) {
-    // Create a new row with a message spanning all columns
-    var messageRow = table.insertRow();
-    var messageCell = messageRow.insertCell();
-    messageCell.colSpan = 9; // Span across all 9 columns
-    messageCell.textContent = "No data is present in the table";
-    messageCell.style.textAlign = "center";
-    messageCell.style.padding = "20px";
-    messageCell.style.fontSize = "18px";
-    messageCell.style.fontWeight = "bold";
-    messageCell.style.color = "#008000"; // Adding green color
-    return;
-  }
-
-  allData.forEach(function (record) {
-    var newRow = table.insertRow();
-    record.forEach(function (value) {
-      var cell = newRow.insertCell();
-      cell.textContent = value;
-    });
-  });
-});
-</script>
-
-
+<script src="script.js"></script>
 </body>
-
 </html>

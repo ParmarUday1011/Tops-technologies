@@ -10,7 +10,7 @@ function resetForm() {
   document.getElementById("pov").value = '';
 
   document.getElementById("nameError").innerHTML = '';
-  document.getElementById("numberError").innerHTML = '';
+  document.getElementById("phoneError").innerHTML = '';
   document.getElementById("emailError").innerHTML = '';
   document.getElementById("addressError").innerHTML = '';
   document.getElementById("aadherError").innerHTML = '';
@@ -19,37 +19,6 @@ function resetForm() {
   document.getElementById("adultError").innerHTML = '';
   document.getElementById("povError").innerHTML = '';
 }
-
-
-// function submitForm() {
-//   event.preventDefault();
-  
-
-//   var fname = document.getElementById("fname").value;
-//   var phone = document.getElementById("phone").value;
-//   var email = document.getElementById("email").value;
-//   var add = document.getElementById("add").value;
-//   var adhno = document.getElementById("adhno").value;
-//   var indate = document.getElementById("indate").value;
-//   var outdate = document.getElementById("outdate").value;
-//   var adult = document.getElementById("Adult").value;
-//   var pov = document.getElementById("pov").value;
-
-//   // Check if any field is empty
-//   if (!fname || !phone || !email || !add || !adhno || !indate || !outdate || !adult || !pov) {
-//     alert("Please fill all fields in the form!");
-//     return; // Stop form submission
-//   }
-//   // collect form data as array
-//   var datasend = datasubmit();
-  
-//   // store in localStorage as JSON string
-//   localStorage.setItem("HotelData", JSON.stringify(datasend));  //js ma thi object ma data convert kare che
-  
-//   console.log("Saved:", datasend);
-//   alert("Data saved successfully!");
-//   resetForm();
-// }
 
 function submitForm() {
   event.preventDefault();
@@ -75,7 +44,7 @@ function submitForm() {
   console.log(datasend);
   
   // Get old data from localStorage or create new array
-  var existingData = JSON.parse(localStorage.getItem("HotelData")) || [];
+  var existingData = JSON.parse(localStorage.getItem("HotelData")) || []; 
 
   // Add new record
   existingData.push(datasend);
@@ -106,14 +75,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (namevalue == "") {
       nameError.innerHTML = "** Please enter your name **";
+      nameError.style.fontWeight = "bold";
       // alert("Please enter your name")
     } else {
       if (namevalue.length <= 2) {
         nameError.innerHTML = "** Name must be more than 2 characters **";
+        nameError.style.fontWeight = "bold";
         // alert("Name must be more than 2 characters")
       } else {
         if (!isNaN(namevalue)) {
           nameError.innerHTML = "** Name cannot be a number **";
+          nameError.style.fontWeight = "bold";
           // alert("Name cannot be a number")
         } else {
           nameError.innerHTML = "";
@@ -130,12 +102,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (phonevalue == "") {
       phoneError.innerHTML = "** Please enter your phone **";
+      phoneError.style.fontWeight = "bold";
     } else {
       // Check if phone has exactly 10 digits
       var phonePattern = /^[0-9]{10}$/;
 
       if (!phonePattern.test(phonevalue)) {
         phoneError.innerHTML = "** Please enter a valid 10-digit mobile number **";
+        phoneError.style.fontWeight = "bold";
       } else {
         phoneError.innerHTML = "";
       }
@@ -149,12 +123,14 @@ document.addEventListener('DOMContentLoaded', function () {
     var emailError = document.getElementById("emailError");
     if (emailvalue == "") {
       emailError.innerHTML = "** Please enter your email **";
+      emailError.style.fontWeight = "bold";
     } else {
       // Regular expression for email validation
       var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
 
       if (!emailPattern.test(emailvalue)) {
         emailError.innerHTML = "** Please enter a valid email address **";
+        emailError.style.fontWeight = "bold";
       } else {
         emailError.innerHTML = "";
       }
@@ -168,9 +144,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (adderssvalue == "") {
       addressError.innerHTML = "** Please enter your adderss **";
+      addressError.style.fontWeight = "bold";
     } else {
       if (adderssvalue.length < 15) {
         addressError.innerHTML = "** Address must be at least 15 characters long **";
+        addressError.style.fontWeight = "bold";
       } else {
         addressError.innerHTML = "";
       }
@@ -184,10 +162,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (aadhervalue == "") {
       aadherError.innerHTML = "** Please enter your 12 digit aadher **";
+      aadherError.style.fontWeight = "bold";
     } else {
       var aadherPattern = /^[0-9]{12}$/;
       if (!aadherPattern.test(aadhervalue)) {
         aadherError.innerHTML = "** Please enter a valid 12-digit Aadhar number **";
+        aadherError.style.fontWeight = "bold";
       } else {
         aadherError.innerHTML = "";
       }
@@ -202,6 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (checkinvalue == "") {
       inError.innerHTML = "** Please enter number of check in date **";
+      inError.style.fontWeight = "bold";
     } else {
       var today = new Date();                // current date
       var checkinDate = new Date(checkinvalue);   // user-entered date
@@ -209,6 +190,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Compare dates — checkin must be today or a future date
       if (checkinDate < today.setHours(0, 0, 0, 0)) {
         inError.innerHTML = "** Check-in date cannot be in the past **";
+        inError.style.fontWeight = "bold";
       } else {
         inError.innerHTML = "";
       }
@@ -223,6 +205,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (checkoutvalue == "") {
       outError.innerHTML = "** Please enter your check out date **";
+      outError.style.fontWeight = "bold";
     } else {
       var checkinDate = new Date(checkin.value);
       var checkoutDate = new Date(checkoutvalue);
@@ -231,10 +214,12 @@ document.addEventListener('DOMContentLoaded', function () {
       var today = new Date().setHours(0, 0, 0, 0);
       if (checkoutDate < today) {
         outError.innerHTML = "** Check-out date cannot be in the past **";
+        outError.style.fontWeight = "bold";
       }
       // Then check if checkout is after checkin
       else if (checkoutDate <= checkinDate) {
         outError.innerHTML = "** Check-out date must be after check-in date **";
+        outError.style.fontWeight = "bold";
       } else {
         outError.innerHTML = "";
       }
@@ -248,9 +233,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (noadultvalue == "") {
     adultError.innerHTML = "** Please enter your adult no. **";
+    adultError.style.fontWeight = "bold";
   } else {
     if (noadultvalue <= 0) {
       adultError.innerHTML = "** Number of adults must be at least 1 **";
+      adultError.style.fontWeight = "bold";
     } else {
       adultError.innerHTML = "";
     }
@@ -265,9 +252,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
      if (Purposevalue == "") {
     povError.innerHTML = "** Please enter your purpose **";
+    povError.style.fontWeight = "bold";
   } else {
     if (Purposevalue.length < 5) {
       povError.innerHTML = "** Purpose must be at least 5 characters long **";
+      povError.style.fontWeight = "bold";
     } else {
       povError.innerHTML = "";
     }
@@ -292,7 +281,7 @@ function datasubmit() {
   return data;
 }
 
-// Save individual fields to localStorage and return them (fixed keys)
+// Save individual fields to localStorage and return them
 function setdata(datasend) {
   // store each field under its own key
   localStorage.setItem("Name", datasend[0]);
@@ -320,17 +309,4 @@ function setdata(datasend) {
   // Also store the full record under HotelData so table.html can read it
   // localStorage.setItem("HotelData", JSON.stringify(datasend));  // convert into js to object
   return send;
-}
-
-function getdatals(detals) {
-  var inrow = table.insertRow();
-  cell1 = inrow.insertCell(0).innerHTML=detals[0];
-  cell2 = inrow.insertCell(1).innerHTML=detals[1];
-  cell3 = inrow.insertCell(2).innerHTML=detals[2];
-  cell4 = inrow.insertCell(3).innerHTML=detals[3];
-  cell5 = inrow.insertCell(4).innerHTML=detals[4];
-  cell6 = inrow.insertCell(5).innerHTML=detals[5];
-  cell7 = inrow.insertCell(6).innerHTML=detals[6];
-  cell8 = inrow.insertCell(7).innerHTML=detals[7];
-  cell9 = inrow.insertCell(8).innerHTML=detals[8];
 }

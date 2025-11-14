@@ -1,61 +1,47 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, sans-serif;
-    background-color: #04ebcc;
-    color: #333;
+    background: #EEAECA;
+    background: linear-gradient(to top, #f6f982, #d9d46f, #fa5862) no-repeat center center fixed;
 }
 
-.name{
-    background-color: #ffae00;
+.name {
+    background: linear-gradient(to right, #ff9843, #ffdd95, #86a7fc);
 }
 
-.btn{
+.frm{
+    background: linear-gradient(to right, #61d4b3, #fdd365, #fb8d62);
+    padding: 20px;
+    border-radius: 8px;
+    
+}
+.cb{
+    background: linear-gradient(to right, #61d4b3, #fdd365, #fb8d62);
+}
+
+h3{
+    font-weight: bold;
+    font-size: 28px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: black;
+}
+
+.btn {
     background-color: #ff6f61;
     border: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
-.fs1{
-    margin-top: 2%;
-    text-align: center;
-    background-color: coral;
-    margin: 2% 0%;
-}
 
-#h2{
-    background-color: chartreuse;
-}
-
-.tbl{
-    border: 1px solid black;
-    background-color:lightgreen;;
-    display: flexbox;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2%;
-    margin-bottom: 0%;
-    margin-left: 0%;
-    margin-right: 0%;
-}
-
-tr{
-    margin: auto;
-    width: 100%;
-}
-th, td{
-    border: 1px solid black;
-    padding: 8px 12px;
-    text-align: center;
-}
 
 .no-data-message {
     color: #008000;
