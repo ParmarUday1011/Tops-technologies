@@ -53,25 +53,47 @@ function displayTable(data) {
   }
 }
 
+//       var searchInput = document.getElementById("searchInput");
+// searchInput.addEventListener("input", function () {
+//   var key = this.value;
+//   key = key.toUpperCase();
+//   var table = document.getElementById("datatbl");
+//   var tr = table.getElementsByTagName("tr");
+//   for (var i = 0; i < tr.length; i++) {
+//     if (i === 0) {
+//       tr[i].style.display = "";
+//       continue;
+//     }
+//     var tds = tr[i].getElementsByTagName("td")[0];
+//     var tdss = tr[i].getElementsByTagName("td")[5];
+//     if (tds && tdss) {
+//       var tds = tds.textContent || tds.innerText;
+//       var tdss = tdss.textContent || tdss.innerText;
+//       tds = tds.toUpperCase();
+//       tdss = tdss.toUpperCase();
+//       if (tds.indexOf(key) > -1 || tdss.indexOf(key) > -1) {
+//         tr[i].style.display = "";
+//       } else {
+//         tr[i].style.display = "none";
+//       }
+//     }
+//   }
+
 var searchInput = document.getElementById("searchInput");
-searchInput.addEventListener("input", function () {
-  var key = this.value;
-  key = key.toUpperCase();
+searchInput.addEventListener("keyup", function () {
+  var key = this.value.toLowerCase();
   var table = document.getElementById("datatbl");
   var tr = table.getElementsByTagName("tr");
-  for (var i = 0; i < tr.length; i++) {
-    if (i === 0) {
-      tr[i].style.display = "";
-      continue;
-    }
-    var tds = tr[i].getElementsByTagName("td")[0];
-    var tdss = tr[i].getElementsByTagName("td")[5];
-    if (tds && tdss) {
-      var tds = tds.textContent || tds.innerText;
-      var tdss = tdss.textContent || tdss.innerText;
-      tds = tds.toUpperCase();
-      tdss = tdss.toUpperCase();
-      if (tds.indexOf(key) > -1 || tdss.indexOf(key) > -1) {
+  for (var i = 1; i < tr.length; i++) {
+    var cn = tr[i].getElementsByTagName("td")[0];
+    var cnn = tr[i].getElementsByTagName("td")[5];
+    if (cn && cnn) {
+      var txtValue = cn.textContent || cn.innerText;
+      var txtValue2 = cnn.textContent || cnn.innerText;
+      if (
+        txtValue.toLowerCase().indexOf(key) > -1 ||
+        txtValue2.toLowerCase().indexOf(key) > -1
+      ) {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";
