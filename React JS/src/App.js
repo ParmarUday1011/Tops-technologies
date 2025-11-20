@@ -1,7 +1,9 @@
 import "./App.css";
+import Counter from "./Component/Counter";
+import Formhandeling from "./Formhandeling";
 // import Aside from './Component/Aside';
 // import Card from './Component/Card';
-import Carousel from "./Component/Carousel";
+// import Carousel from "./Component/Carousel";
 // import Side from './Component/Side';
 // import Footer from './Component/Footer';
 // import Navbar from './Component/Navbar';
@@ -14,15 +16,18 @@ function App() {
     <Footer/>
     <Card u={u}/>
     <Aside/> */}
-      <Carousel
+      {/* <Carousel
         bag={"Bag Collection"}
         bagD={"Latest Fashion in Bags"}
         shoes={"Shoes Collection"}
         shoesD={"Latest Design in Shoes"}
         watch={'watch Collection'}
         watchD={'Latest Design in watch'}
-      />
+      /> */}
       {/* <Side/> */}
+      <Counter/>
+      <Formhandeling/>
+      
     </>
   );
 }
