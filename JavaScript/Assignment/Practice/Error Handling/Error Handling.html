@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error Handling</title>
+  </head>
+  <body>
+    <input type="text" id="num" placeholder="numerator" /><br /><br /><br />
+    <input type="text" id="num1" placeholder="denominator" /><br /><br /><br />
+    <input type="button" value="division" onclick="divide()" />
+
+    <script>
+      function divide(){
+          let num1 = document.getElementById("num").value
+          let num2 = document.getElementById("num1").value
+
+          try{
+              if(num2==0){
+              throw("denominator can't 0")
+          }else{
+              console.log(num1/num2);
+          }
+          }
+          catch(e){
+            console.log("error "+e)
+            
+          }
+      }
+    </script>
+  </body>
+</html>

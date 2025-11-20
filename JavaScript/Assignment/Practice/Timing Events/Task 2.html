@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 Digital Clock</title>
+    <style>
+        body{
+            background-color:gray;
+            padding-top: 250px;
+            padding-left: 520px;
+        }
+        #dclock{
+            display: inline-block;
+            padding: 25px 50px;
+            font-style:italic;
+            font-weight: 600px;
+            font-size:xx-large;
+            box-shadow: 0 0 100px rgba(255, 252, 252, 0.945);
+            border-radius: 5%;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div id="dclock">00:00:00</div>
+
+    <script>
+        function clock(){
+            var cloclkup = new Date()
+            let hour = cloclkup.getHours()
+            let min = cloclkup.getMinutes()
+            let sec = cloclkup.getSeconds()
+
+            hour = hour<10 ? "0" + hour : hour
+            min = min<10 ? "0" + min : min
+            sec = sec<10 ? "0" + sec : sec
+
+            const time =`${hour} : ${min} : ${sec}`
+            document.getElementById("dclock").textContent=time
+        }
+        setInterval(clock, 1000)
+        clock()
+    </script>
+</body>
+</html>
